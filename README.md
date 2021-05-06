@@ -10,3 +10,5 @@ Clona este repositorio y en [config.json](./config.json) pon el token de tu bot,
 - [Victorio0005](https://www.github.com/Victorio005) - programación
 - Fabi - elección de musica 
 	
+## Aportaciones 
+Si quieres mejorar el proyecto haz una pull request y si esta bien se te daran creditós en [colaboradores](./readme.md), si decides hacerlo muchas gracias
