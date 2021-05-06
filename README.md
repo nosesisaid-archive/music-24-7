@@ -1,5 +1,5 @@
-# Musica-24/7
-Un bot de musica 34/7 funcional
+# Musica-simple-24/7
+Un bot de musica 24/7 
 
 ## Requisitos 
 [node.js](https://www.nodejs.org)
