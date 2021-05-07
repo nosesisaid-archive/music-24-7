@@ -20,4 +20,4 @@ var i = 0
     })
 
 })
-client.login(config.prefix)
+client.login(config.token)
