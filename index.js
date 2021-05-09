@@ -4,9 +4,11 @@ const ytdl = require('ytdl-core')
 const config = require('config.json')('./config.json')
 client.on('ready', () => {
 
-var i = 0
+
+
     console.log('funcionando correctamente')
     client.user.setStatus(`online`) 
+    
     const channel = client.channels.cache.get(config.channel)
 
     channel.join().then(connection => {
@@ -20,4 +22,15 @@ var i = 0
     })
 
 })
+
+client.on('message', async function (message)  {
+    var musicmod = ['id#1', 'id#2']
+    if(message.content === `${config.prefix}reset`) {
+        if(!musicmod.includes(message.author.id)) return message.channel.send('no tienes los permisos necesarios')
+        message.channel.send('reiniciando 💿').then( () => {
+            process.exit()
+        })
+
+    }
+}) 
 client.login(config.token)
