@@ -3,5 +3,5 @@
     "channel":"la id del canal de musica aqui",
   "video":"la url del video aqui",
   "prefix":"prefixdetubot",
-  "roleid":"Tuiddediscord"
+  "roleid":"la id de tu rol de DJ"
 }
