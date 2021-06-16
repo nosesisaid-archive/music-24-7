@@ -2,5 +2,6 @@
     "token":"tu token aqui",
     "channel":"la id del canal de musica aqui",
   "video":"la url del video aqui",
-  "prefix":"prefixdetubot"
+  "prefix":"prefixdetubot",
+  "roleid":"Tuiddediscord"
 }
