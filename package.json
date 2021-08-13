@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Nosesisaid/musica-24-7",
   "dependencies": {
     "config.json": "0.0.4",
-    "discord.js": "^12.5.3",
+    "discord.js": "^13.1.0",
     "ffmpeg": "0.0.4",
     "ffmpeg-static": "^4.3.0",
     "opusscript": "0.0.8",
