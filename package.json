@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/Nosesisaid/musica-24-7",
   "dependencies": {
-    "config.json": "0.0.4",
-    "discord.js": "^12.5.3",
-    "ffmpeg": "0.0.4",
-    "ffmpeg-static": "^4.3.0",
+    "@discordjs/voice": "^0.6.0",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.0",
+    "libsodium-wrappers": "^0.7.9",
     "opusscript": "0.0.8",
-    "ytdl-core": "^4.7.0"
+    "ytdl-core": "^4.9.1"
   }
 }

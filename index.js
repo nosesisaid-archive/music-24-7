@@ -1,23 +1,47 @@
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const client = new Discord.Client({ intents: 129})
 const ytdl = require('ytdl-core')
-const config = require('config.json')('./config.json')
+const {
+  joinVoiceChannel,
+  createAudioPlayer,
+  NoSubscriberBehavior,
+  createAudioResource,
+  AudioPlayerStatus
+} = require("@discordjs/voice");
+
+
+require("dotenv").config()
+
+
 client.on('ready', () => {
 
-var i = 0
-    console.log('funcionando correctamente')
-    client.user.setStatus(`online`) 
-    const channel = client.channels.cache.get(config.channel)
 
-    channel.join().then(connection => {
+    console.log('Working correctly');
 
-        const stream = ytdl(config.video, { filter: 'audioonly' });
-        const dispatcher = connection.play(stream);
-        console.log(`poniendo el video con la url: \n `)
-        dispatcher.on('finish', () => {
-            process.exit()
-        });
-    })
+
+const player = createAudioPlayer({
+behaviors: {
+noSubscriber: NoSubscriberBehavior.Pause,
+},
+});
+    
+    
+const guild = client.guilds.cache.get(process.env.guildID);
+const connection = joinVoiceChannel({
+  channelId: process.env.channelID,
+  guildId: guild.id,
+  adapterCreator: guild.voiceAdapterCreator,
+});
+
+    const audio = ytdl(process.env.video);
+    
+    const resource = createAudioResource(audio);
+    
+    player.play(resource);
+    
+    connection.subscribe(player)
+    
+    player.on(AudioPlayerStatus.Idle, _ => process.exit())
 
 })
-client.login(config.token)
+client.login(process.env.token)
