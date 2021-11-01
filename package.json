@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Nosesisaid/musica-24-7",
   "dependencies": {
-    "@discordjs/voice": "^0.6.0",
+    "@discordjs/voice": "^0.7.2",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.4.0",
